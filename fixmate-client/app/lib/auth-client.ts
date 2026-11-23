@@ -1,7 +1,6 @@
 
 import { createAuthClient } from "better-auth/react";
 import { adminClient } from "better-auth/client/plugins";
-
 import { createAccessControl } from "better-auth/plugins/access";
 
 import {
@@ -9,20 +8,12 @@ import {
   adminAc,
 } from "better-auth/plugins/admin/access";
 
-// =====================================
-// FixMate Access Control
-// =====================================
-
 const statement = {
   ...defaultStatements,
   fixmate: ["access"],
 };
 
 const ac = createAccessControl(statement);
-
-// =====================================
-// Define Roles
-// =====================================
 
 const adminRole = ac.newRole({
   ...adminAc.statements,
@@ -37,12 +28,10 @@ const technicianRole = ac.newRole({
   fixmate: ["access"],
 });
 
-// =====================================
-// Auth Client
-// =====================================
-
 export const authClient = createAuthClient({
-  baseURL: "http://localhost:5000",
+  baseURL:
+    process.env.NEXT_PUBLIC_API_URL?.replace(/\/api\/?$/, "") ||
+    "http://localhost:5000",
 
   fetchOptions: {
     credentials: "include",

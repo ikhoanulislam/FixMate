@@ -4,7 +4,6 @@ import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 
 import { admin as adminPlugin } from "better-auth/plugins";
-
 import { createAccessControl } from "better-auth/plugins/access";
 
 import {
@@ -33,24 +32,32 @@ const statement = {
 
 const ac = createAccessControl(statement);
 
-// Admin Role
 const adminRole = ac.newRole({
   ...adminAc.statements,
   fixmate: ["access"],
 });
 
-// Customer Role
 const customerRole = ac.newRole({
   fixmate: ["access"],
 });
 
-// Technician Role
 const technicianRole = ac.newRole({
   fixmate: ["access"],
 });
 
 // =====================================
-// 3. Better Auth Configuration
+// 3. Trusted Origins
+// =====================================
+
+const trustedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:5000",
+  "https://fix-mate-bice.vercel.app",
+  process.env.CLIENT_URL,
+].filter(Boolean);
+
+// =====================================
+// 4. Better Auth Configuration
 // =====================================
 
 const auth = betterAuth({
@@ -59,30 +66,32 @@ const auth = betterAuth({
   }),
 
   secret: process.env.BETTER_AUTH_SECRET,
+
   baseURL: process.env.BETTER_AUTH_URL,
 
-  trustedOrigins: [
-    "http://localhost:3000",
-    "http://localhost:5000",
-  ],
+  trustedOrigins,
+
+  advanced: {
+    defaultCookieAttributes: {
+      sameSite: "none",
+      secure: true,
+    },
+  },
 
   emailAndPassword: {
     enabled: true,
   },
 
-  // Additional User Fields
   user: {
     additionalFields: {
       phone: {
         type: "string",
         required: false,
       },
-
       area: {
         type: "string",
         required: false,
       },
-
       bio: {
         type: "string",
         required: false,
@@ -90,13 +99,10 @@ const auth = betterAuth({
     },
   },
 
-  // Role Management
   plugins: [
     adminPlugin({
       defaultRole: "customer",
-
       ac,
-
       roles: {
         admin: adminRole,
         customer: customerRole,

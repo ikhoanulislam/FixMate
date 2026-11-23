@@ -1,0 +1,21 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/booking/[id]/page": "/booking/[id]",
+  "/dashboard/admin/page": "/dashboard/admin",
+  "/dashboard/customer/bookings/page": "/dashboard/customer/bookings",
+  "/dashboard/customer/page": "/dashboard/customer",
+  "/dashboard/customer/payments/page": "/dashboard/customer/payments",
+  "/dashboard/page": "/dashboard",
+  "/dashboard/technician/page": "/dashboard/technician",
+  "/dashboard/technician/requests/page": "/dashboard/technician/requests",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/payment/cancel/page": "/payment/cancel",
+  "/payment/success/page": "/payment/success",
+  "/services/[id]/page": "/services/[id]",
+  "/services/page": "/services",
+  "/sign-in/page": "/sign-in",
+  "/sign-up/page": "/sign-up"
+}

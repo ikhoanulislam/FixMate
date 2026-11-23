@@ -1,0 +1,21 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/booking/[id]/page": "app/booking/[id]/page.js",
+  "/dashboard/admin/page": "app/dashboard/admin/page.js",
+  "/dashboard/customer/bookings/page": "app/dashboard/customer/bookings/page.js",
+  "/dashboard/customer/page": "app/dashboard/customer/page.js",
+  "/dashboard/customer/payments/page": "app/dashboard/customer/payments/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/dashboard/technician/page": "app/dashboard/technician/page.js",
+  "/dashboard/technician/requests/page": "app/dashboard/technician/requests/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/payment/cancel/page": "app/payment/cancel/page.js",
+  "/payment/success/page": "app/payment/success/page.js",
+  "/services/[id]/page": "app/services/[id]/page.js",
+  "/services/page": "app/services/page.js",
+  "/sign-in/page": "app/sign-in/page.js",
+  "/sign-up/page": "app/sign-up/page.js"
+}

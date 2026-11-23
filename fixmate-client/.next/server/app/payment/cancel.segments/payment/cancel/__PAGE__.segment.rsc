@@ -1,0 +1,35 @@
+2:"$Sreact.fragment"
+3:"/_next/static/chunks/44jz64s0_afzt.js"
+4:"/_next/static/chunks/3n46x_5axayos.js"
+5:I[82833,["$3","$4"],"default"]
+6:I[43918,["$3","$4"],"default"]
+d:I[56017,["$3","$4"],""]
+e:I[81219,["$3","$4"],"OutletBoundary"]
+f:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[81219,["$3","$4"],"$13"]
+15:"MetadataBoundary"
+16:I[81219,["$3","$4"],"$15"]
+17:I[62073,["$3","$4"],"IconMark"]
+8:X
+8:C
+9:X
+9:300
+9:C
+12:X
+12:C
+c:[["children",{"s":"__PAGE__","h":49314,"d":{"r":["$","$2","c",{"children":[["$","main",null,{"className":"flex min-h-[70vh] items-center justify-center px-4 py-12","children":["$","div",null,{"className":"w-full max-w-md rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-lg dark:border-gray-700 dark:bg-gray-900","children":[["$","div",null,{"className":"mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-red-100 text-4xl dark:bg-red-950","children":"✕"}],["$","h1",null,{"className":"mb-3 text-2xl font-bold text-gray-900 dark:text-white","children":"Payment Cancelled"}],["$","p",null,{"className":"mb-6 leading-relaxed text-gray-600 dark:text-gray-400","children":"Your payment was not completed. No payment has been charged. You can return to your bookings and try again whenever you are ready."}],["$","div",null,{"className":"flex flex-col gap-3","children":[["$","$Ld",null,{"href":"/dashboard/customer/bookings","className":"rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700","children":"Back to My Bookings"}],["$","$Ld",null,{"href":"/","className":"rounded-lg border border-gray-300 px-5 py-3 font-semibold text-gray-700 transition hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800","children":"Go to Homepage"}]]}]]}]}],null,["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]]}],"p":"$@11","v":"$12","s":"$9"}}]]
+a:[["children",{"s":"cancel","h":49250,"d":{"r":["$","$2","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@b","v":"$8","s":"$9"},"c":"$Qc"}]]
+1:[["children",{"s":"payment","h":49218,"d":{"r":["$","$2","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@7","v":"$8","s":"$9"},"c":"$Qa"}]]
+19:X
+19:C
+1c:X
+1c:C
+0:{"t":{"t":{"s":"","h":49170,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"FixMate | Home Services Made Easier"}],["$","meta","1",{"name":"description","content":"Discover and book reliable home services with FixMate. Connect with technicians for electrical, plumbing, AC repair and more."}],["$","meta","2",{"name":"application-name","content":"FixMate"}],["$","meta","3",{"name":"author","content":"FixMate"}],["$","meta","4",{"name":"keywords","content":"FixMate,Home Services,Technician,AC Repair,Electrical Services,Plumbing,Home Repair Bangladesh"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","link","6",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L17","7",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@18","v":"$19","s":"$9"}},"a":"$@1a","u":"$@1b","b":"WqYRYBS1yR0ojT5UY8y3D","r":"$1c"}
+10:null
+1b:false
+1a:null
+b:"$undefined"
+7:"$undefined"
+18:"$undefined"
+11:"$undefined"

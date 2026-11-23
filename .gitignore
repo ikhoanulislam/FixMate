@@ -1,0 +1,16 @@
+﻿node_modules/
+**/node_modules/
+.next/
+**/.next/
+dist/
+build/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+*.mp4
+fixmate-server/fixmate-server/
+
+node_modules/
+**/node_modules/

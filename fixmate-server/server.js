@@ -27,9 +27,19 @@ const PORT = process.env.PORT || 5000;
 // 1. CORS Configuration
 // =====================================
 
+const allowedOrigins = (process.env.CLIENT_URL || "http://localhost:3000")
+  .split(",")
+  .map((url) => url.trim());
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000",
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error(`Not allowed by CORS: ${origin}`));
+      }
+    },
     credentials: true,
   })
 );
@@ -141,15 +151,12 @@ const startServer = async () => {
       throw new Error("BETTER_AUTH_URL is missing from .env");
     }
 
-    // Connect Better Auth MongoDB Client
     await mongoClient.connect();
 
     console.log("Better Auth MongoDB Connected");
 
-    // Connect Mongoose
     await connectDB();
 
-    // Start Express Server
     app.listen(PORT, () => {
       console.log(`FixMate Server running on port ${PORT}`);
     });

@@ -206,7 +206,7 @@ Stripe test mode can be used for testing payments.
 
 ## Developer
 
-**Developed by:** Mehedi  
+**Developed by:** IKHOANUL ISLAM  
 **Project:** FixMate  
 **Purpose:** Home Service Booking Platform
 

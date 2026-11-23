@@ -24,7 +24,16 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // =====================================
-// 1. CORS Configuration
+// 1. Environment Configuration Check
+// =====================================
+
+console.log(
+  "STRIPE_CURRENCY:",
+  JSON.stringify(process.env.STRIPE_CURRENCY)
+);
+
+// =====================================
+// 2. CORS Configuration
 // =====================================
 
 const allowedOrigins = (process.env.CLIENT_URL || "http://localhost:3000")
@@ -45,19 +54,19 @@ app.use(
 );
 
 // =====================================
-// 2. Better Auth Handler
+// 3. Better Auth Handler
 // =====================================
 
 app.all("/api/auth/{*any}", toNodeHandler(auth));
 
 // =====================================
-// 3. JSON Middleware
+// 4. JSON Middleware
 // =====================================
 
 app.use(express.json());
 
 // =====================================
-// 4. API Routes
+// 5. API Routes
 // =====================================
 
 app.use("/api/admin", adminRoutes);
@@ -66,7 +75,7 @@ app.use("/api/bookings", bookingRoutes);
 app.use("/api/payments", paymentRoutes);
 
 // =====================================
-// 5. Home Route
+// 6. Home Route
 // =====================================
 
 app.get("/", (req, res) => {
@@ -74,7 +83,7 @@ app.get("/", (req, res) => {
 });
 
 // =====================================
-// 6. Authentication Test
+// 7. Authentication Test
 // =====================================
 
 app.get("/api/test/protected", verifyToken, (req, res) => {
@@ -86,55 +95,40 @@ app.get("/api/test/protected", verifyToken, (req, res) => {
 });
 
 // =====================================
-// 7. Customer Test
+// 8. Customer Test
 // =====================================
 
-app.get(
-  "/api/test/customer",
-  verifyToken,
-  verifyCustomer,
-  (req, res) => {
-    return res.status(200).json({
-      success: true,
-      message: "Customer access granted!",
-    });
-  }
-);
+app.get("/api/test/customer", verifyToken, verifyCustomer, (req, res) => {
+  return res.status(200).json({
+    success: true,
+    message: "Customer access granted!",
+  });
+});
 
 // =====================================
-// 8. Technician Test
+// 9. Technician Test
 // =====================================
 
-app.get(
-  "/api/test/technician",
-  verifyToken,
-  verifyTechnician,
-  (req, res) => {
-    return res.status(200).json({
-      success: true,
-      message: "Technician access granted!",
-    });
-  }
-);
+app.get("/api/test/technician", verifyToken, verifyTechnician, (req, res) => {
+  return res.status(200).json({
+    success: true,
+    message: "Technician access granted!",
+  });
+});
 
 // =====================================
-// 9. Admin Test
+// 10. Admin Test
 // =====================================
 
-app.get(
-  "/api/test/admin",
-  verifyToken,
-  verifyAdmin,
-  (req, res) => {
-    return res.status(200).json({
-      success: true,
-      message: "Admin access granted!",
-    });
-  }
-);
+app.get("/api/test/admin", verifyToken, verifyAdmin, (req, res) => {
+  return res.status(200).json({
+    success: true,
+    message: "Admin access granted!",
+  });
+});
 
 // =====================================
-// 10. Start Server
+// 11. Start Server
 // =====================================
 
 const startServer = async () => {

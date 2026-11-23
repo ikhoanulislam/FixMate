@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/USER/Downloads/FixMate/fixmate-client/app/services/layout.tsx"],"sourcesContent":["export const instant = false;\r\n\r\nexport default function ServicesLayout({\r\n  children,\r\n}: {\r\n  children: React.ReactNode;\r\n}) {\r\n  return <>{children}</>;\r\n}"],"names":["instant","ServicesLayout","children"],"mappings":";;;;;;;;;;AAAO,MAAMA,UAAU;AAER,SAASC,eAAe,EACrCC,QAAQ,EAGT;IACC,qBAAO;kBAAGA;;;;;;AACZ;gFARuB;kBAAA"}}]
-}

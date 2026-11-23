@@ -1,11 +1,17 @@
 
 "use client";
 
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { authClient } from "../lib/auth-client";
+
+const dashboardRoutes: Record<string, string> = {
+  admin: "/dashboard/admin",
+  technician: "/dashboard/technician",
+  customer: "/dashboard/customer",
+};
 
 function SignUpForm() {
   const router = useRouter();
@@ -13,11 +19,39 @@ function SignUpForm() {
 
   const redirectTo = searchParams.get("redirect");
 
+  // Get the current authentication session
+  const { data: session, isPending } = authClient.useSession();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  // Redirect already authenticated users
+  useEffect(() => {
+    if (isPending) return;
+
+    const user = session?.user;
+
+    if (user) {
+      const destination =
+        dashboardRoutes[user.role || ""] || "/dashboard";
+
+      router.replace(destination);
+    }
+  }, [session, isPending, router]);
+
+  // Prevent logged-in users from seeing the signup form
+  if (isPending || session?.user) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[#101820] text-[#B7F34A]">
+        <p className="animate-pulse text-sm font-semibold">
+          Checking your account...
+        </p>
+      </div>
+    );
+  }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -64,7 +98,7 @@ function SignUpForm() {
 
       const user = sessionResult.data.user;
 
-      // Public registration should only create customer accounts.
+      // Public registration should only create customer accounts
       if (user.role !== "customer") {
         await authClient.signOut();
 
@@ -74,7 +108,7 @@ function SignUpForm() {
         return;
       }
 
-      // Only allow approved customer destinations.
+      // Only allow approved customer destinations
       const allowedRedirects = ["/services"];
 
       const destination =

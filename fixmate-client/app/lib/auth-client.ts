@@ -1,4 +1,3 @@
-
 import { createAuthClient } from "better-auth/react";
 import { adminClient } from "better-auth/client/plugins";
 import { createAccessControl } from "better-auth/plugins/access";

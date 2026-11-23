@@ -14,16 +14,59 @@ type Service = {
   technicianName?: string;
 };
 
+type Category = {
+  name: string;
+  description: string;
+  image: string;
+  icon: string;
+};
+
 const API_URL =
   process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
 
-const categories = [
-  "Electronics",
-  "AC & Cooling",
-  "Appliance Repair",
-  "Electrical",
-  "Plumbing",
-  "Cleaning",
+const categories: Category[] = [
+  {
+    name: "Electronics",
+    description: "TV, Computer & Electronics Repair",
+    image:
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=700&q=80",
+    icon: "💻",
+  },
+  {
+    name: "AC & Cooling",
+    description: "AC Repair, Installation & Cleaning",
+    image:
+      "https://images.unsplash.com/photo-1631545806609-8b4e3f9f5b3d?w=700&q=80",
+    icon: "❄️",
+  },
+  {
+    name: "Appliance Repair",
+    description: "Fridge, Washing Machine & Microwave",
+    image:
+      "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=700&q=80",
+    icon: "🔧",
+  },
+  {
+    name: "Electrical",
+    description: "Wiring, Switch & Lighting",
+    image:
+      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=700&q=80",
+    icon: "💡",
+  },
+  {
+    name: "Plumbing",
+    description: "Pipe, Tap & Bathroom Repair",
+    image:
+      "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=700&q=80",
+    icon: "🚿",
+  },
+  {
+    name: "Cleaning",
+    description: "Home, Kitchen & Sofa Cleaning",
+    image:
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=700&q=80",
+    icon: "🧹",
+  },
 ];
 
 export default function ServicesPage() {
@@ -51,7 +94,7 @@ export default function ServicesPage() {
     setInitialized(true);
   }, []);
 
-  // Fetch services from backend
+  // Fetch approved services from backend
   useEffect(() => {
     if (!initialized) return;
 
@@ -124,6 +167,16 @@ export default function ServicesPage() {
     setAppliedSearch(search.trim());
   };
 
+  // Select category
+  const handleCategorySelect = (selectedCategory: string) => {
+    setCategory(selectedCategory);
+
+    document.getElementById("available-services")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   // Clear filters
   const clearFilters = () => {
     setSearch("");
@@ -139,7 +192,6 @@ export default function ServicesPage() {
 
   return (
     <main className="min-h-screen bg-[#101820] text-[#F5F7FA]">
-
       {/* PAGE HERO */}
       <section className="border-b border-white/10 bg-[#172630]">
         <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8 lg:py-20">
@@ -154,8 +206,8 @@ export default function ServicesPage() {
           </h1>
 
           <p className="mt-4 max-w-xl text-sm leading-7 text-slate-400">
-            Browse available home services, compare prices and find the help
-            you need.
+            Browse available home services, compare prices and find
+            the help you need.
           </p>
 
           {/* SEARCH FORM */}
@@ -173,7 +225,7 @@ export default function ServicesPage() {
 
             <button
               type="submit"
-              className="rounded-xl bg-[#B7F34A] px-7 py-3 text-sm font-black text-[#101820] hover:bg-[#caff65]"
+              className="rounded-xl bg-[#B7F34A] px-7 py-3 text-sm font-black text-[#101820] transition hover:bg-[#caff65]"
             >
               Search ↗
             </button>
@@ -181,8 +233,109 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* CATEGORY SECTION */}
+      <section className="mx-auto max-w-7xl px-5 pt-12 lg:px-8">
+        <div className="mb-7">
+          <p className="text-xs font-black tracking-widest text-[#21C7C7]">
+            BROWSE BY CATEGORY
+          </p>
+
+          <div className="mt-2 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+            <div>
+              <h2 className="text-2xl font-black sm:text-3xl">
+                Explore Our Categories
+              </h2>
+
+              <p className="mt-2 text-sm text-slate-400">
+                Find the right professionals for every home need.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setCategory("")}
+              className={`text-sm font-bold transition ${
+                !category
+                  ? "text-[#B7F34A]"
+                  : "text-slate-400 hover:text-[#B7F34A]"
+              }`}
+            >
+              View All Services →
+            </button>
+          </div>
+        </div>
+
+        {/* CATEGORY CARDS */}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {categories.map((item) => {
+            const isSelected = category === item.name;
+
+            return (
+              <button
+                type="button"
+                key={item.name}
+                onClick={() => handleCategorySelect(item.name)}
+                aria-pressed={isSelected}
+                className={`group relative overflow-hidden rounded-2xl border text-left transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
+                  isSelected
+                    ? "border-[#B7F34A] ring-2 ring-[#B7F34A]/30"
+                    : "border-white/10 hover:border-[#21C7C7]/60"
+                }`}
+              >
+                <div className="relative h-52 overflow-hidden bg-[#263744]">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#101820] via-[#101820]/30 to-transparent" />
+
+                  <span className="absolute right-4 top-4 rounded-xl border border-white/15 bg-[#101820]/75 px-3 py-2 text-2xl backdrop-blur-sm">
+                    {item.icon}
+                  </span>
+
+                  {isSelected && (
+                    <span className="absolute left-4 top-4 rounded-full bg-[#B7F34A] px-3 py-1.5 text-[10px] font-black text-[#101820]">
+                      SELECTED
+                    </span>
+                  )}
+
+                  <div className="absolute bottom-4 left-5 right-5">
+                    <h3 className="text-xl font-black text-white">
+                      {item.name}
+                    </h3>
+
+                    <p className="mt-1 text-xs text-slate-200">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between bg-[#192630] px-5 py-4">
+                  <span className="text-xs font-bold text-slate-400">
+                    Explore services
+                  </span>
+
+                  <span className="text-lg font-bold text-[#B7F34A] transition group-hover:translate-x-1">
+                    →
+                  </span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </section>
+
       {/* SERVICES CONTENT */}
-      <section className="mx-auto max-w-7xl px-5 py-12 lg:px-8">
+      <section
+        id="available-services"
+        className="mx-auto max-w-7xl scroll-mt-8 px-5 py-14 lg:px-8"
+      >
         <div className="flex flex-col justify-between gap-5 md:flex-row md:items-center">
           <div>
             <p className="text-xs font-black tracking-widest text-[#21C7C7]">
@@ -190,7 +343,7 @@ export default function ServicesPage() {
             </p>
 
             <h2 className="mt-2 text-2xl font-black sm:text-3xl">
-              Available services
+              {category || "Available services"}
             </h2>
 
             <p className="mt-2 text-sm text-slate-400">
@@ -210,8 +363,8 @@ export default function ServicesPage() {
               <option value="">All Categories</option>
 
               {categories.map((item) => (
-                <option key={item} value={item}>
-                  {item}
+                <option key={item.name} value={item.name}>
+                  {item.name}
                 </option>
               ))}
             </select>
@@ -228,35 +381,22 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        {/* CATEGORY CHIPS */}
-        <div className="mt-7 flex flex-wrap gap-2">
-          <button
-            type="button"
-            onClick={() => setCategory("")}
-            className={`rounded-full border px-4 py-2 text-xs font-bold transition ${
-              !category
-                ? "border-[#B7F34A] bg-[#B7F34A] text-[#101820]"
-                : "border-white/15 text-slate-300 hover:border-[#B7F34A]"
-            }`}
-          >
-            All Services
-          </button>
+        {/* ACTIVE FILTER */}
+        {category && (
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <span className="rounded-full border border-[#B7F34A]/30 bg-[#B7F34A]/10 px-4 py-2 text-xs font-bold text-[#B7F34A]">
+              {category}
+            </span>
 
-          {categories.map((item) => (
             <button
               type="button"
-              key={item}
-              onClick={() => setCategory(item)}
-              className={`rounded-full border px-4 py-2 text-xs font-bold transition ${
-                category === item
-                  ? "border-[#B7F34A] bg-[#B7F34A] text-[#101820]"
-                  : "border-white/15 text-slate-300 hover:border-[#B7F34A]"
-              }`}
+              onClick={() => setCategory("")}
+              className="text-xs font-bold text-slate-400 hover:text-white"
             >
-              {item}
+              Clear category ✕
             </button>
-          ))}
-        </div>
+          </div>
+        )}
 
         {/* LOADING */}
         {(!initialized || loading) && (
@@ -276,7 +416,7 @@ export default function ServicesPage() {
             <p className="font-bold text-red-300">{error}</p>
 
             <p className="mt-2 text-sm text-slate-400">
-              Please check that your backend server is running on port 5000.
+              Please check your backend connection and try again.
             </p>
 
             <button
@@ -302,6 +442,7 @@ export default function ServicesPage() {
                     <img
                       src={service.image}
                       alt={service.title}
+                      loading="lazy"
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
                     />
                   ) : (

@@ -1,14 +1,14 @@
 1:"$Sreact.fragment"
-2:"/_next/static/chunks/3ai4n0t1bylp3.js"
-3:I[82833,["$2"],"default"]
-4:I[43918,["$2"],"default"]
-9:I[81219,["$2"],"OutletBoundary"]
+2:"/_next/static/chunks/3--kddkpj24az.js"
+3:I[72903,["$2"],"default"]
+4:I[58048,["$2"],"default"]
+9:I[5034,["$2"],"OutletBoundary"]
 a:"$Sreact.suspense"
 e:"ViewportBoundary"
-f:I[81219,["$2"],"$e"]
+f:I[5034,["$2"],"$e"]
 10:"MetadataBoundary"
-11:I[81219,["$2"],"$10"]
-12:I[62073,["$2"],"IconMark"]
+11:I[5034,["$2"],"$10"]
+12:I[34228,["$2"],"IconMark"]
 6:X
 6:C
 7:X
@@ -21,7 +21,7 @@ d:C
 14:C
 17:X
 17:C
-0:{"t":{"t":{"s":"","h":49234,"d":{"r":["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$a",null,{"name":"Next.Metadata","children":[["$","link","0",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L12","1",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@13","v":"$14","s":"$7"}},"a":"$@15","u":"$@16","b":"WqYRYBS1yR0ojT5UY8y3D","r":"$17"}
+0:{"t":{"t":{"s":"","h":49234,"d":{"r":["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}],"p":"$@5","v":"$6","s":"$7"},"c":"$Q8"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$a",null,{"name":"Next.Metadata","children":[["$","link","0",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L12","1",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@13","v":"$14","s":"$7"}},"a":"$@15","u":"$@16","b":"QVc_PI8vN5rSeDqJ5Njsr","r":"$17"}
 b:null
 16:false
 15:null

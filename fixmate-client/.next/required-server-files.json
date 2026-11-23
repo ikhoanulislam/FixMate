@@ -105,7 +105,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\USER\\Downloads\\FixMate\\fixmate-client",
+    "outputFileTracingRoot": "C:\\Users\\USER\\Downloads\\FixMate",
     "enablePrerenderSourceMaps": true,
     "cacheComponents": true,
     "cacheLife": {
@@ -345,13 +345,13 @@
           "as": "*.css"
         }
       },
-      "root": "C:\\Users\\USER\\Downloads\\FixMate\\fixmate-client"
+      "root": "C:\\Users\\USER\\Downloads\\FixMate"
     },
-    "repoRoot": "C:\\Users\\USER\\Downloads\\FixMate\\fixmate-client",
+    "repoRoot": "C:\\Users\\USER\\Downloads\\FixMate",
     "distDirRoot": ".next"
   },
   "appDir": "C:\\Users\\USER\\Downloads\\FixMate\\fixmate-client",
-  "relativeAppDir": "",
+  "relativeAppDir": "fixmate-client",
   "files": [
     ".next\\package.json",
     ".next\\routes-manifest.json",

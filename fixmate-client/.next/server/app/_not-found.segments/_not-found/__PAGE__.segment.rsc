@@ -1,15 +1,15 @@
 2:"$Sreact.fragment"
-3:"/_next/static/chunks/44jz64s0_afzt.js"
-4:"/_next/static/chunks/3n46x_5axayos.js"
-5:I[82833,["$3","$4"],"default"]
-6:I[43918,["$3","$4"],"default"]
-b:I[81219,["$3","$4"],"OutletBoundary"]
+3:"/_next/static/chunks/23a_15cwnd3sd.js"
+4:"/_next/static/chunks/0ej9evcs75gj8.js"
+5:I[72903,["$3","$4"],"default"]
+6:I[58048,["$3","$4"],"default"]
+b:I[5034,["$3","$4"],"OutletBoundary"]
 c:"$Sreact.suspense"
 10:"ViewportBoundary"
-11:I[81219,["$3","$4"],"$10"]
+11:I[5034,["$3","$4"],"$10"]
 12:"MetadataBoundary"
-13:I[81219,["$3","$4"],"$12"]
-14:I[62073,["$3","$4"],"IconMark"]
+13:I[5034,["$3","$4"],"$12"]
+14:I[34228,["$3","$4"],"IconMark"]
 8:X
 8:C
 9:X
@@ -23,7 +23,7 @@ a:[["children",{"s":"__PAGE__","h":49314,"d":{"r":["$","$2","c",{"children":[[["
 16:C
 19:X
 19:C
-0:{"t":{"t":{"s":"","h":49170,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L11",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L13",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"FixMate | Home Services Made Easier"}],["$","meta","1",{"name":"description","content":"Discover and book reliable home services with FixMate. Connect with technicians for electrical, plumbing, AC repair and more."}],["$","meta","2",{"name":"application-name","content":"FixMate"}],["$","meta","3",{"name":"author","content":"FixMate"}],["$","meta","4",{"name":"keywords","content":"FixMate,Home Services,Technician,AC Repair,Electrical Services,Plumbing,Home Repair Bangladesh"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","link","6",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L14","7",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@15","v":"$16","s":"$9"}},"a":"$@17","u":"$@18","b":"WqYRYBS1yR0ojT5UY8y3D","r":"$19"}
+0:{"t":{"t":{"s":"","h":49170,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L11",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L13",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"FixMate | Home Services Made Easier"}],["$","meta","1",{"name":"description","content":"Discover and book reliable home services with FixMate. Connect with technicians for electrical, plumbing, AC repair and more."}],["$","meta","2",{"name":"application-name","content":"FixMate"}],["$","meta","3",{"name":"author","content":"FixMate"}],["$","meta","4",{"name":"keywords","content":"FixMate,Home Services,Technician,AC Repair,Electrical Services,Plumbing,Home Repair Bangladesh"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","link","6",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L14","7",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@15","v":"$16","s":"$9"}},"a":"$@17","u":"$@18","b":"QVc_PI8vN5rSeDqJ5Njsr","r":"$19"}
 d:null
 18:false
 17:null

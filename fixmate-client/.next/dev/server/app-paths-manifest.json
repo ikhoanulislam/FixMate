@@ -1,5 +1,12 @@
 {
+  "/booking/[id]/page": "app/booking/[id]/page.js",
+  "/dashboard/customer/bookings/page": "app/dashboard/customer/bookings/page.js",
   "/dashboard/customer/page": "app/dashboard/customer/page.js",
+  "/dashboard/customer/payments/page": "app/dashboard/customer/payments/page.js",
+  "/dashboard/technician/page": "app/dashboard/technician/page.js",
   "/page": "app/page.js",
-  "/services/page": "app/services/page.js"
+  "/payment/success/page": "app/payment/success/page.js",
+  "/services/[id]/page": "app/services/[id]/page.js",
+  "/services/page": "app/services/page.js",
+  "/sign-in/page": "app/sign-in/page.js"
 }

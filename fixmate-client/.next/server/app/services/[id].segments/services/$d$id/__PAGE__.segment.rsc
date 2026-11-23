@@ -1,18 +1,18 @@
 2:"$Sreact.fragment"
-3:"/_next/static/chunks/44jz64s0_afzt.js"
-4:"/_next/static/chunks/3n46x_5axayos.js"
-5:I[82833,["$3","$4"],"default"]
-6:I[43918,["$3","$4"],"default"]
-e:I[55921,["$3","$4"],"ClientPageRoot"]
-f:"/_next/static/chunks/3_tck6ljceoqh.js"
-10:I[22958,["$3","$4","$f"],"default"]
-11:I[81219,["$3","$4"],"OutletBoundary"]
+3:"/_next/static/chunks/23a_15cwnd3sd.js"
+4:"/_next/static/chunks/0ej9evcs75gj8.js"
+5:I[72903,["$3","$4"],"default"]
+6:I[58048,["$3","$4"],"default"]
+e:I[65327,["$3","$4"],"ClientPageRoot"]
+f:"/_next/static/chunks/19azbmdji2afo.js"
+10:I[22427,["$3","$4","$f"],"default"]
+11:I[5034,["$3","$4"],"OutletBoundary"]
 12:"$Sreact.suspense"
 15:"ViewportBoundary"
-16:I[81219,["$3","$4"],"$15"]
+16:I[5034,["$3","$4"],"$15"]
 17:"MetadataBoundary"
-18:I[81219,["$3","$4"],"$17"]
-19:I[62073,["$3","$4"],"IconMark"]
+18:I[5034,["$3","$4"],"$17"]
+19:I[34228,["$3","$4"],"IconMark"]
 8:X
 8:C
 9:X
@@ -20,14 +20,14 @@ f:"/_next/static/chunks/3_tck6ljceoqh.js"
 9:C
 c:X
 c:C
-d:[["children",{"s":"__PAGE__","h":49314,"d":{"r":["$","$2","c",{"children":[["$","$Le",null,{"Component":"$10","serverProvidedParams":null}],[["$","script","script-0",{"src":"/_next/static/chunks/3_tck6ljceoqh.js","async":true}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}],"p":"$@14","v":"$c","s":"$9"}}]]
+d:[["children",{"s":"__PAGE__","h":49314,"d":{"r":["$","$2","c",{"children":[["$","$Le",null,{"Component":"$10","serverProvidedParams":null}],[["$","script","script-0",{"src":"/_next/static/chunks/19azbmdji2afo.js","async":true}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}],"p":"$@14","v":"$c","s":"$9"}}]]
 a:[["children",{"s":{"n":"id","t":"d","k":null,"s":[]},"h":49250,"d":{"r":["$","$2","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@b","v":"$c","s":"$9"},"c":"$Qd"}]]
 1:[["children",{"s":"services","h":57410,"d":{"r":["$","$2","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@7","v":"$8","s":"$9"},"c":"$Qa"}]]
 1b:X
 1b:C
 1e:X
 1e:C
-0:{"t":{"t":{"s":"","h":57362,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L16",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L18",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$12",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"FixMate | Home Services Made Easier"}],["$","meta","1",{"name":"description","content":"Discover and book reliable home services with FixMate. Connect with technicians for electrical, plumbing, AC repair and more."}],["$","meta","2",{"name":"application-name","content":"FixMate"}],["$","meta","3",{"name":"author","content":"FixMate"}],["$","meta","4",{"name":"keywords","content":"FixMate,Home Services,Technician,AC Repair,Electrical Services,Plumbing,Home Repair Bangladesh"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","link","6",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L19","7",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@1a","v":"$1b","s":"$9"}},"a":"$@1c","u":"$@1d","b":"WqYRYBS1yR0ojT5UY8y3D","r":"$1e"}
+0:{"t":{"t":{"s":"","h":57362,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L16",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L18",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$12",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"FixMate | Home Services Made Easier"}],["$","meta","1",{"name":"description","content":"Discover and book reliable home services with FixMate. Connect with technicians for electrical, plumbing, AC repair and more."}],["$","meta","2",{"name":"application-name","content":"FixMate"}],["$","meta","3",{"name":"author","content":"FixMate"}],["$","meta","4",{"name":"keywords","content":"FixMate,Home Services,Technician,AC Repair,Electrical Services,Plumbing,Home Repair Bangladesh"}],["$","meta","5",{"name":"robots","content":"index, follow"}],["$","link","6",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L19","7",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@1a","v":"$1b","s":"$9"}},"a":"$@1c","u":"$@1d","b":"QVc_PI8vN5rSeDqJ5Njsr","r":"$1e"}
 13:null
 1d:false
 1c:null
